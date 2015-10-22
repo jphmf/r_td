@@ -25,49 +25,63 @@ devices_normal = devices.station_mac[devices.power < -20].value_counts()
 # motorola - 3:23 - 3:28
 motorola_p1 = devices[(devices.time >1445365380) & (devices.time < 1445365680) & (devices.station_mac == '5C:51:88:D4:43:F1')].groupby('station_mac').agg({'power':[np.size, np.median]})
 #5C:51:88:D4:43:F1    28    -65
+#(2,5)
 
 # motorola - 3:28 - 3:33
 motorola_p2 = devices[(devices.time >1445365680) & (devices.time < 1445365980) & (devices.station_mac == '5C:51:88:D4:43:F1')].groupby('station_mac').agg({'power':[np.size, np.median]})
 #5C:51:88:D4:43:F1    23    -81
+#(3,4)
+
 
 # motorola - 3:33 - 3:38
 motorola_p3 = devices[(devices.time >1445365980) & (devices.time < 1445366280) & (devices.station_mac == '5C:51:88:D4:43:F1')].groupby('station_mac').agg({'power':[np.size, np.median]})
 #5C:51:88:D4:43:F1     6    -88
+#(4,3)
+
 
 # motorola - 3:38 - 3:43
 motorola_p4 = devices[(devices.time >1445366280) & (devices.time < 1445366580) & (devices.station_mac == '5C:51:88:D4:43:F1')].groupby('station_mac').agg({'power':[np.size, np.median]})
 #5C:51:88:D4:43:F1    15    -75
+#(2,4)
+
 
 # motorola - 3:43 - 3:48
 motorola_p5 = devices[(devices.time >1445366580) & (devices.time < 1445366880) & (devices.station_mac == '5C:51:88:D4:43:F1')].groupby('station_mac').agg({'power':[np.size, np.median]})
 #5C:51:88:D4:43:F1     9    -89
-
+#(0,3)
 
 # motorola - 3:48 - 3:53
 motorola_p6 = devices[(devices.time >1445366880) & (devices.time < 1445367180) & (devices.station_mac == '5C:51:88:D4:43:F1')].groupby('station_mac').agg({'power':[np.size, np.median]})
 #5C:51:88:D4:43:F1     6    -86
-
+#(0,1)
 
 # motorola - 3:53 - 3:58
 motorola_p7 = devices[(devices.time >1445367180) & (devices.time < 1445367480) & (devices.station_mac == '5C:51:88:D4:43:F1')].groupby('station_mac').agg({'power':[np.size, np.median]})
 #5C:51:88:D4:43:F1     2    -85
+#(1,0)
+
 
 # motorola - 3:58 - 4:03
 motorola_p8 = devices[(devices.time >1445367480) & (devices.time < 1445367780) & (devices.station_mac == '5C:51:88:D4:43:F1')].groupby('station_mac').agg({'power':[np.size, np.median]})
 # vazio
+#(2,1)
 
 # motorola - 4:03 - 4:08
 motorola_p9 = devices[(devices.time >1445367780) & (devices.time < 1445368080) & (devices.station_mac == '5C:51:88:D4:43:F1')].groupby('station_mac').agg({'power':[np.size, np.median]})
 #5C:51:88:D4:43:F1     6    -87
+#(4,1)
 
 # motorola - 4:09 - 4:14
 motorola_p10 = devices[(devices.time >1445368140) & (devices.time < 1445368440) & (devices.station_mac == '5C:51:88:D4:43:F1')].groupby('station_mac').agg({'power':[np.size, np.median]})
 #5C:51:88:D4:43:F1    12    -86
+#(2,2)
 
 # motorola - 4:14 - 4:19
 motorola_p11 = devices[(devices.time >1445368440) & (devices.time < 1445368740) & (devices.station_mac == '5C:51:88:D4:43:F1')].groupby('station_mac').agg({'power':[np.size, np.median]})
 #5C:51:88:D4:43:F1    22    -75
+#(3,2)
 
 # motorola - 4:20 - 4:22
 motorola_p12 = devices[(devices.time >1445368800) & (devices.time < 1445368920) & (devices.station_mac == '5C:51:88:D4:43:F1')].groupby('station_mac').agg({'power':[np.size, np.median]})
 #5C:51:88:D4:43:F1     1    -89
+#(0,4)
