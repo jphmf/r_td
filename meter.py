@@ -69,5 +69,5 @@ motorola_p11 = devices[(devices.time >1445368440) & (devices.time < 1445368740) 
 #5C:51:88:D4:43:F1    22    -75
 
 # motorola - 4:20 - 4:22
-motorola_p11 = devices[(devices.time >1445368800) & (devices.time < 1445368920) & (devices.station_mac == '5C:51:88:D4:43:F1')].groupby('station_mac').agg({'power':[np.size, np.median]})
+motorola_p12 = devices[(devices.time >1445368800) & (devices.time < 1445368920) & (devices.station_mac == '5C:51:88:D4:43:F1')].groupby('station_mac').agg({'power':[np.size, np.median]})
 #5C:51:88:D4:43:F1     1    -89
