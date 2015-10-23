@@ -4,7 +4,7 @@ import numpy as np
 
 d_cols = ['station_mac', 'first_seen', 'manufacturer', 'power', 'probed_ssid', 'last_seen', 'riot_id', 'current_ap_bssid', 'current_ap_essid', 'poweron_mac', 'fip_essid', 'time']
 
-devices = pd.read_csv('files/devices.csv', sep=",", names=d_cols)
+devices = pd.read_csv('files/devices_23_10_manha.csv', sep=",", names=d_cols)
 devices['time'] = devices['time'].convert_objects(convert_numeric=True)
 devices['power']  = devices['power'].convert_objects(convert_numeric=True)
 
@@ -136,3 +136,5 @@ samsung_a3 = devices[(devices.time >1445541240) & (devices.time <1445541420 ) & 
 samsung_a4 = devices[(devices.time >1445541540) & (devices.time <1445541720 ) & (devices.station_mac == 'F0:25:B7:8B:9E:28')].groupby('station_mac').agg({'power':[np.size, np.median]})
 
 print(samsung_a1, samsung_a2, samsung_a3, samsung_a4)
+
+print (devices[(devices.time > 1445609357) & (devices.time < 1445610137)].groupby('last_seen').agg({'power':[np.size, np.median]}))
